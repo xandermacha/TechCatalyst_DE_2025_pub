@@ -1,4 +1,4 @@
-# Applying Analytics Types to Business Decision-Making
+# Applying Analytics Types to Business Decision-Making![Types of Data Analysis in Data Science and Its Applications](images/Data_analysis_0ea8f061cf.png)
 
 ## Main Ask
 
