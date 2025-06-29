@@ -6,7 +6,7 @@
 
 # Learning Journey
 
-![Data Engineering-Plan](images/Data Engineering-Plan.png)
+![Data-Engineering-Plan](images/Data-Engineering-Plan.png)
 
 
 
