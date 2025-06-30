@@ -1,6 +1,6 @@
 # Data Engineering Case Study: Car Insurance Industry
 
-![ChatGPT Image Jun 29, 2025 at 11_46_11 PM](images/ChatGPT Image Jun 29, 2025 at 11_46_11 PM.png)
+![ChatGPT Image Jun 29, 2025 at 11_46_11 PM](images/de.png)
 
 # Objective
 
