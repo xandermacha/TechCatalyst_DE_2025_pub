@@ -27,7 +27,7 @@ Inside `Lab Resources` folder:
 1. Open the newly created bucket by clicking on its name.
 2. Click on the “**Upload**” button.
 3. Click “Add files” and select the `coffee.jpg` file from your local machine.
-4. Click “**Upload**” to upload the image. Once uploaded you can click the “https://grok.com” button on the top right corner
+4. Click “**Upload**” to upload the image. Once uploaded you can click the close button on the top right corner
 5. Click on the image you just uploaded and test by clicking the “Open” button
 
 ![image-20240618122645940](images/image-20240618122645940.png)
