@@ -180,7 +180,7 @@ wc tech/shakespeare.txt
 # Count only lines
 wc -l tech/shakespeare.txt
 
-# Count only words
+# Count only words
 wc -w tech/shakespeare.txt
 
 # Count lines in CSV (including header)
