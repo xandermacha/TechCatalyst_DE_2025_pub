@@ -1,0 +1,17 @@
+timestamp,user_id,action,product_id
+2025-07-06T10:00:00Z,user_123,view,prod_A
+2025-07-06T10:01:00Z,user_456,view,prod_B
+2025-07-06T10:02:00Z,user_123,add_to_cart,prod_A
+2025-07-06T10:03:00Z,user_789,view,prod_C
+2025-07-06T10:04:00Z,user_456,purchase,prod_B
+2025-07-06T10:04:00Z,user_456,purchase,prod_B
+2025-07-06T10:05:00Z,user_123,purchase,prod_A
+2025-07-06T10:06:00Z,user_789,add_to_cart,prod_C
+2025-07-06T10:07:00Z,user_555,view,prod_D
+2025-07-06T10:08:00Z,user_123,view,prod_E
+2025-07-06T10:09:00Z,user_456,view,prod_F
+2025-07-06T10:09:00Z,user_456,view,prod_F
+
+2025-07-06T10:10:00Z,user_789,purchase,prod_C
+2025-07-06T10:11:00Z,user_555,add_to_cart,prod_D
+2025-07-06T10:12:00Z,user_123,view,prod_A
