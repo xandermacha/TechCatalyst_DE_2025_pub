@@ -36,6 +36,13 @@ Data Engineers must translate complex data concepts into clear, actionable insig
 
 Understanding the business context in which data solutions are applied enables Data Engineers to design systems that truly align with organizational goals. This skill ensures that technical efforts are not just precise, but also pragmatic and impactful, driving real business value.
 
-## AWS 
+## AWS Console
 
 * Web Console Access: https://developintelligence.signin.aws.amazon.com/console
+
+# Resources
+
+1. [Data Science at the Command Line](https://jeroenjanssens.com/dsatcl/)
+
+
+
