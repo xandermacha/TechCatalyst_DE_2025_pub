@@ -59,6 +59,6 @@ conda create -n yourenvname
 ```
 conda activate yourenvname
 conda install ipykernel
-conda
+python -m ipykernel install --user --name yourenvname --display-name "A NAME TO DISPLAY"
 ```
 
