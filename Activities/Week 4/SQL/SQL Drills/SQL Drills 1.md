@@ -1,4 +1,4 @@
-# 4.1.1 Exercise
+# SQL Drill #1
 
 #### **1. Basic Customer Information**
 
@@ -10,7 +10,7 @@ From the `SUPPLIER` table, list supplier names (`s_name`) and their account bala
 
 #### **3. Part Market Segments**
 
-Select part names (`p_name`) from the `PART` table for parts that belong to either the 'SMALL' or 'LARGE' market segment (`p_size`).  Where small is <= 20 and Large is anything greater than 20. Order the result by part name.
+From the `PART` table, display the part name (`p_name`) and a calculated column named `market_segment`. This new column should contain the value 'SMALL' if the part's `p_size` is less than or equal to 20, and 'LARGE' otherwise. Order the result by part name.
 
 #### **4. Order Count by Year**
 
@@ -18,7 +18,7 @@ Count the number of orders made each year. Display the year and the count of ord
 
 #### **5. Average Order Prices**
 
-Calculate the average total order price for each customer. Display the customer key (`c_custkey`) and the corresponding average order price.
+Show the customer name and order price for **every order** that contained the part with `p_partkey = 5`. It is expected to see the same customer multiple times if they placed multiple qualifying orders
 
 #### **6. Customer and Nation Information**
 
@@ -34,8 +34,8 @@ List customers (`c_name`) who have ordered a part with `p_partkey` equal to 5. I
 
 #### **9. Monthly Sales Analysis (Using CTE)**
 
-Using a CTE, determine the total sales for each month of the year. Display the month and the corresponding total sales.
+Monthly Sales Analysis (Using CTE): Using a CTE, calculate the total sales revenue for **each calendar month** in the dataset. Display each month (e.g., `1995-01-01`) and its corresponding total sales, ordered chronologically.
 
 #### **10. Top Supplier Overview (Using CTE)**
 
-Using a CTE, identify the top 5 suppliers based on the total value of parts they supply. Display the supplier name and the total value of parts supplied.
+Using a CTE, identify the top 5 suppliers based on the total **revenue generated from parts they sold** (as recorded in the `LINEITEM` table). Display the supplier's name and their total calculated revenue, ordered from highest to lowest.
