@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering Comprehensive Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #007bff;
+            margin: 20px;
+            border-radius: 5px;
+        }
+
+        .quiz-content {
+            padding: 20px;
+        }
+
+        .question {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .question:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .question-header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 15px;
+            margin: -25px -25px 20px -25px;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .option:hover {
+            border-color: #007bff;
+            background: #e3f2fd;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            border-color: #007bff;
+            background: #007bff;
+            color: white;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 12px;
+            transform: scale(1.2);
+        }
+
+        .option-label {
+            font-weight: bold;
+            margin-right: 10px;
+            min-width: 25px;
+        }
+
+        .option-text {
+            flex: 1;
+            line-height: 1.5;
+        }
+
+        pre {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+
+        code {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        .submit-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f8f9fa;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .submit-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: #e9ecef;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #007bff, #28a745);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .student-info {
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+        }
+
+        .student-info input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .question {
+                padding: 20px;
+            }
+            
+            .question-header {
+                margin: -20px -20px 15px -20px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Data Engineering Comprehensive Quiz</h1>
+        </div>
+
+        <div class="student-info">
+            <input type="text" id="studentName" placeholder="Enter your full name (optional)" />
+            <input type="email" id="studentEmail" placeholder="Enter your email (optional)" />
+        </div>
+
+        <div class="instructions">
+            <strong>Instructions:</strong> For each question, please select the best possible answer. Click the Submit button at the end to download your responses.
+        </div>
+
+        <div class="quiz-content" id="quizContent">
+            <!-- Questions will be generated here -->
+        </div>
+
+        <div class="submit-section">
+            <button class="submit-btn" id="submitBtn" onclick="generateCSV()">
+                Submit Quiz & Download Results
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                id: 1,
+                title: "ETL vs ELT",
+                text: "Which of the following best describes the primary difference between ETL and ELT?",
+                options: [
+                    "ETL transforms data before loading it into the data warehouse, while ELT loads raw data and transforms it within the warehouse.",
+                    "ETL is used for unstructured data, while ELT is used for structured data.",
+                    "ETL requires a data lake, whereas ELT requires a data warehouse.",
+                    "ETL stands for 'Extract, Transfer, Load', while ELT stands for 'Extract, Load, Transfer'."
+                ]
+            },
+            {
+                id: 2,
+                title: "File Formats",
+                text: "Which file format is a columnar storage format known for its excellent compression and performance benefits in analytical querying?",
+                options: ["CSV", "JSON", "AVRO", "Parquet"]
+            },
+            {
+                id: 3,
+                title: "Data Types",
+                text: "A dataset containing a mix of customer emails, images of receipts, and plain text reviews is best described as:",
+                options: ["Structured Data", "Unstructured Data", "Semi-structured Data", "Relational Data"]
+            },
+            {
+                id: 4,
+                title: "Big Data Characteristics",
+                text: "What are the '3 Vs' that are commonly used to define Big Data?",
+                options: [
+                    "Volume, Velocity, and Variety",
+                    "Volume, Veracity, and Value",
+                    "Velocity, Virtualization, and Visualization",
+                    "Variety, Veracity, and Volatility"
+                ]
+            },
+            {
+                id: 5,
+                title: "AWS S3 Storage Classes",
+                text: "Which AWS S3 storage class is designed for long-term archival of data that is accessed infrequently, with retrieval times of several hours?",
+                options: ["S3 Standard", "S3 Intelligent-Tiering", "S3 Glacier Deep Archive", "S3 Standard-IA"]
+            },
+            {
+                id: 6,
+                title: "AWS Glue Crawler",
+                text: "What is the primary function of an AWS Glue Crawler?",
+                options: [
+                    "To execute ETL jobs written in Python or Scala.",
+                    "To query data directly in Amazon S3 using standard SQL.",
+                    "To scan data in a data store, infer the schema, and create metadata tables in the AWS Glue Data Catalog.",
+                    "To provide a visual interface for cleaning and normalizing data without writing code."
+                ]
+            },
+            {
+                id: 7,
+                title: "AWS Services Combination",
+                text: "A data engineer wants to run a SQL query on a CSV file stored in an S3 bucket. Which combination of AWS services would be most suitable for this task?",
+                options: [
+                    "AWS Glue and Amazon Redshift",
+                    "Amazon S3 and AWS Lambda",
+                    "AWS Glue Data Catalog and Amazon Athena",
+                    "AWS DataBrew and Amazon S3"
+                ]
+            },
+            {
+                id: 8,
+                title: "Amazon S3 Features",
+                text: "Which feature of Amazon S3, when enabled, keeps a complete history of all versions of an object, protecting against accidental deletions or overwrites?",
+                options: ["S3 Lifecycle Policies", "S3 Versioning", "S3 Cross-Region Replication", "S3 Bucket Policies"]
+            },
+            {
+                id: 9,
+                title: "AWS Glue DataBrew",
+                text: "In AWS Glue DataBrew, what is a 'recipe'?",
+                options: [
+                    "A schedule for running data preparation jobs.",
+                    "A connection to a data source like S3 or a JDBC database.",
+                    "A set of transformation steps that can be applied to a dataset.",
+                    "The output dataset after transformations have been applied."
+                ]
+            },
+            {
+                id: 10,
+                title: "Python Sets",
+                text: "What is the output of the following Python code snippet?",
+                code: `my_set = {1, 2, 3, 3, 2}
+print(len(my_set))`,
+                options: ["5", "3", "2", "An error will be raised."]
+            },
+            {
+                id: 11,
+                title: "Python Collections",
+                text: "Which Python collection type is defined by key-value pairs and is mutable?",
+                options: ["List", "Tuple", "Set", "Dictionary"]
+            },
+            {
+                id: 12,
+                title: "Python Functions",
+                text: "How would you write a Python function called `calculate_average` that accepts a list of numbers and returns their average?",
+                options: [
+                    "def calculate_average(numbers):\n    return sum(numbers) / len(numbers)",
+                    "def calculate_average(numbers):\n    return total(numbers) / count(numbers)",
+                    "function calculate_average(numbers):\n    return sum(numbers) // len(numbers)",
+                    "def calculate_average(numbers):\n    print(sum(numbers) / len(numbers))"
+                ]
+            },
+            {
+                id: 13,
+                title: "Python Control Flow",
+                text: "What will be printed to the console after this Python code is executed?",
+                code: `for i in range(1, 5):
+    if i == 3:
+        continue #hint: skip the loop
+    print(i)`,
+                options: ["1, 2, 4, 5", "1, 2, 3, 4", "1, 2", "1, 2, 4"]
+            },
+            {
+                id: 14,
+                title: "Git Version Control",
+                text: "What is the primary purpose of using a `.gitignore` file in a project?",
+                options: [
+                    "To list all the files in the project repository.",
+                    "To specify which files and directories should be ignored by the Git version control system.",
+                    "To store environment variables and credentials securely.",
+                    "To document the project's dependencies."
+                ]
+            },
+            {
+                id: 15,
+                title: "Pandas DateTime Conversion",
+                text: "You have a pandas DataFrame `df` with a 'sale_date' column stored as strings ('YYYY-MM-DD'). Which function should you use to convert this column to a proper datetime data type?",
+                options: [
+                    "pd.to_datetime(df['sale_date'])",
+                    "df['sale_date'].to_date()",
+                    "pd.convert_datetime(df['sale_date'])",
+                    "df['sale_date'].astype('datetime')"
+                ]
+            },
+            {
+                id: 16,
+                title: "Pandas I/O Functions",
+                text: "Which pandas I/O function would you use to read a file that uses a columnar storage format, which is beneficial for large-scale analytical workloads?",
+                options: ["pd.read_csv()", "pd.read_json()", "pd.read_parquet()", "pd.read_excel()"]
+            },
+            {
+                id: 17,
+                title: "Pandas DataFrame Operations",
+                text: "In pandas, you have two DataFrames: `df_customers` (with columns `customer_id`, `name`) and `df_orders` (with columns `order_id`, `customer_id`, `amount`). How would you combine them to create a single DataFrame that includes all customers and their corresponding orders?",
+                options: [
+                    "pd.concat([df_customers, df_orders])",
+                    "pd.merge(df_customers, df_orders, on='customer_id', how='left')",
+                    "df_customers.join(df_orders)",
+                    "pd.merge(df_customers, df_orders, on='customer_id', how='inner')"
+                ]
+            },
+            {
+                id: 18,
+                title: "Pandas Data Filtering",
+                text: "How do you select all rows from a pandas DataFrame `df` where the value in the 'age' column is greater than 30?",
+                options: [
+                    "df[df['age'] > 30]",
+                    "df.query('age' < 30)",
+                    "df.loc['age' > 30]",
+                    "df.where(df['age'] > 30)"
+                ]
+            },
+            {
+                id: 19,
+                title: "SQL Aggregation Filtering",
+                text: "Which SQL clause is used to filter the results of a query after aggregation has been performed by a `GROUP BY` clause?",
+                options: ["WHERE", "HAVING", "FILTER", "ORDER BY"]
+            },
+            {
+                id: 20,
+                title: "Common Table Expressions",
+                text: "What is a Common Table Expression (CTE) in SQL?",
+                options: [
+                    "A permanent table that is stored in the database schema.",
+                    "A temporary named result set that you can reference within a SELECT, INSERT, UPDATE, DELETE statement.",
+                    "A special type of JOIN that combines rows from two or more tables.",
+                    "An alias given to a column or table in a query."
+                ]
+            },
+            {
+                id: 21,
+                title: "SQL Joins and Subqueries",
+                text: "Given two tables, `Employees` (EmployeeID, Name) and `Sales` (SaleID, EmployeeID, Amount), which SQL query will return the names of employees who have not made any sales?",
+                options: [
+                    `SELECT e.Name
+FROM Employees e
+LEFT JOIN Sales s ON e.EmployeeID = s.EmployeeID
+WHERE s.SaleID IS NULL;`,
+                    `SELECT e.Name
+FROM Employees e
+INNER JOIN Sales s ON e.EmployeeID = s.EmployeeID;`,
+                    `SELECT e.Name
+FROM Employees e
+RIGHT JOIN Sales s ON e.EmployeeID = s.EmployeeID;`,
+                    `SELECT e.Name
+FROM Employees e
+LEFT JOIN Sales s ON e.EmployeeID = s.EmployeeID
+WHERE s.SaleID IS NOT NULL;`
+                ]
+            },
+            {
+                id: 22,
+                title: "SQL Subqueries",
+                text: "In SQL, what is the main purpose of a subquery?",
+                options: [
+                    "To format the output of the main query, such as changing data types.",
+                    "To create a permanent backup of a table before modification.",
+                    "To nest a query inside another query, allowing the result of the inner query to be used by the outer query.",
+                    "To combine rows from two or more tables based on a related column."
+                ]
+            },
+            {
+                id: 23,
+                title: "Snowflake Architecture",
+                text: "Which statement best describes Snowflake's architecture?",
+                options: [
+                    "A tightly coupled architecture where compute and storage are combined on the same nodes.",
+                    "A two-layer architecture consisting only of a storage layer and a query processing layer.",
+                    "A multi-cluster, shared-data architecture that separates storage, compute, and cloud services into three distinct layers.",
+                    "A serverless architecture where users only manage the cloud services layer."
+                ]
+            },
+            {
+                id: 24,
+                title: "Snowflake Compute Layer",
+                text: "In the Snowflake architecture, what is the 'Compute Layer' composed of?",
+                options: [
+                    "The underlying cloud storage (e.g., S3, Azure Blob Storage) where all data is stored.",
+                    "A collection of services that coordinate activities, including authentication, metadata management, and query optimization.",
+                    "User-managed relational database instances.",
+                    "One or more clusters of virtual warehouses that execute queries and perform data processing."
+                ]
+            },
+            {
+                id: 25,
+                title: "Snowflake Benefits",
+                text: "What is a key advantage of Snowflake's separation of storage and compute?",
+                options: [
+                    "It ensures that all data is stored in a relational format.",
+                    "It guarantees that all queries will run in under one minute.",
+                    "It allows multiple compute clusters (virtual warehouses) to access the same data simultaneously without competing for resources.",
+                    "It reduces data storage costs by automatically compressing all data."
+                ]
+            }
+        ];
+
+        function renderQuiz() {
+            const quizContent = document.getElementById('quizContent');
+            
+            questions.forEach(question => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                
+                let questionHTML = `
+                    <div class="question-header">
+                        Question ${question.id}: ${question.title}
+                    </div>
+                    <div class="question-text">${question.text}</div>
+                `;
+                
+                if (question.code) {
+                    questionHTML += `<pre><code>${question.code}</code></pre>`;
+                }
+                
+                questionHTML += '<div class="options">';
+                
+                question.options.forEach((option, index) => {
+                    const letter = String.fromCharCode(65 + index);
+                    const isCode = option.includes('def ') || option.includes('function ') || option.includes('SELECT ') || option.includes('FROM');
+                    
+                    questionHTML += `
+                        <div class="option" onclick="selectOption(${question.id}, '${letter}', this)">
+                            <input type="radio" name="q${question.id}" value="${letter}" id="q${question.id}${letter}">
+                            <span class="option-label">${letter})</span>
+                            <div class="option-text">
+                                ${isCode ? `<pre><code>${option}</code></pre>` : option}
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                questionHTML += '</div>';
+                questionDiv.innerHTML = questionHTML;
+                quizContent.appendChild(questionDiv);
+            });
+        }
+
+        function selectOption(questionId, answer, element) {
+            // Remove selection from other options in this question
+            const questionDiv = element.parentElement;
+            questionDiv.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Add selection to clicked option
+            element.classList.add('selected');
+            
+            // Check the radio button
+            const radio = element.querySelector('input[type="radio"]');
+            radio.checked = true;
+            
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const totalQuestions = questions.length;
+            const answeredQuestions = document.querySelectorAll('input[type="radio"]:checked').length;
+            const progress = (answeredQuestions / totalQuestions) * 100;
+            
+            document.getElementById('progressFill').style.width = progress + '%';
+            
+            const submitBtn = document.getElementById('submitBtn');
+            if (answeredQuestions === totalQuestions) {
+                submitBtn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.style.background = '#6c757d';
+                submitBtn.disabled = true;
+            }
+        }
+
+        function generateCSV() {
+            const studentName = document.getElementById('studentName').value || 'Anonymous';
+            const studentEmail = document.getElementById('studentEmail').value || 'No Email';
+            const timestamp = new Date().toISOString();
+            
+            let csvContent = 'Question_Number,Student_Answer\n';
+            
+            // Add student info as comment lines
+            csvContent += `# Student Name: ${studentName}\n`;
+            csvContent += `# Student Email: ${studentEmail}\n`;
+            csvContent += `# Timestamp: ${timestamp}\n`;
+            
+            questions.forEach(question => {
+                const selectedRadio = document.querySelector(`input[name="q${question.id}"]:checked`);
+                const answer = selectedRadio ? selectedRadio.value : 'No Answer';
+                csvContent += `${question.id},${answer}\n`;
+            });
+            
+            // Create and download the file
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `quiz_results_${studentName.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_${Date.now()}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Show success message
+            alert('Quiz submitted successfully! Your results have been downloaded.');
+        }
+
+        // Initialize the quiz when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            renderQuiz();
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
