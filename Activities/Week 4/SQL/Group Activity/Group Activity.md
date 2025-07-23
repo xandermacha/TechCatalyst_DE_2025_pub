@@ -32,14 +32,60 @@ You can use the following table for each type you are researching.
 
 | Field           | Description |
 | --------------- | ----------- |
-| Definition      |             |
-| Purpose         |             |
-| Key Difference  |             |
-| Common Use Case |             |
+| Definition      |  Hiding sensitive data from view        |
+| Purpose         |  limits access to sensitive data that should not be exposed to all users of underlying table          |
+| Key Difference  |  Executes slower than non-secure view           |
+| Common Use Case |  simplify queries for which users do not need to understand the underlying data representation           |
 | Syntax Example  |             |
 
+```sql 
+   CREATE VIEW doctor_view AS SELECT patient_ID, patient_name diagnosis, treatment FROM hospital_table; 
+```
 1. **Share Your Findings**:
 
-   - Be prepared to present your findings 
+   - Be prepared to present your findings
 
-     
+---
+
+## Views
+
+### **Standard Views**
+
+| Field           | Description |
+| --------------- | ----------- |
+| Definition      |  A named definition of a query           |
+| Purpose         |  Allows accessing queryies as a table           |
+| Key Difference  |  results are not stored           |
+| Common Use Case |  For having the same data display views for different needs           |
+| Syntax Example  |             |
+
+```sql 
+   CREATE VIEW doctor_view AS SELECT patient_ID, patient_name diagnosis, treatment FROM hospital_table; 
+```
+### **Materialized Views**
+
+| Field           | Description |
+| --------------- | ----------- |
+| Definition      |  The materialized views results are stored          |
+| Purpose         |  More like an actual table so data can be accessed quicker          |
+| Key Difference  |  requires storage space and maintenance           |
+| Common Use Case |  When query results contain small amount of rows and columns or when results require processing           |
+| Syntax Example  |             |
+```sql
+  CREATE MATERIALIZED doctor_view AS
+  SELECT patient_ID, patient_name, diagnosis, treatment FROM hospital_table;
+```
+
+### **Secured Views**
+
+| Field           | Description |
+| --------------- | ----------- |
+| Definition      |  Hiding sensitive data from view        |
+| Purpose         |  limits access to sensitive data that should not be exposed to all users of underlying table          |
+| Key Difference  |  Executes slower than non-secure view           |
+| Common Use Case |  simplify queries for which users do not need to understand the underlying data representation           |
+| Syntax Example  |             |
+```sql
+  CREATE SECURE VIEW doctor_view AS
+  SELECT patient_ID, patient_name, diagnosis, treatment FROM hospital_table;
+```

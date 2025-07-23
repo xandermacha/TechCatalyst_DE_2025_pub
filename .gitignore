@@ -1,0 +1,5 @@
+/dev1
+*.env
+**/*.cfg
+**/.ipynb_checkpoints/
+/.vscode
