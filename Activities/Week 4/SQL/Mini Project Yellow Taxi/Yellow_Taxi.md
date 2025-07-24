@@ -189,14 +189,25 @@ Finance Team asked you to access the VIEW you just created but you realized that
 
 Due to the security constraints, you will need to create a new view for Finance that they can access for their own reprint needs with such restrictions. 
 
-* Give the VIEW a unique name so Finance know this is the one to use.
+* Give the VIEW a unique and meaningful name so Finance knows this is the one to use.
+* Give the columns a business friendly and meaningful names 
 
-## TASK 6
+## TASK 6 (Group)
 
-* Create 2-3 slide presentation for your team 
-  * One slide described your process (What you did, how you didi it ..etc) so **business** can appreciate your effort and all the trouble you went through to ensure data is validated.
-  * Another 1-2 slides, summarize your findings regarding the Yellow Taxis Data. Any interesting insights? 
-* Be ready to present your slides. Make sure you write your team names.
+> [!Note]
+>
+> This data engineering project was sponsored by the executive leadership to create datasets business can use for their analysis. You did a great job completing the pipeline and transform the data, and create the views that the business can access. Now, the executive leadership asked for a briefing from your team, think of it as a status session, as part of the project closure. They want to know how things went, is the data ready for use, ..etc.
+
+> [!TIP]
+>
+> * Create 2-3 slide presentation for your team 
+>   * One slide described your process (What you did, how you didi it ..etc) so **business leadership** can appreciate your effort and all the trouble you went through to ensure data is validated, migrated, and prepared for analyst to use. 
+>     * You can add a flow diagram or architecture diagram (optional)
+>   * Another 1-2 slides, summarize your findings regarding the Yellow Taxis Data. Any interesting insights about the data itself? 
+>     * For example, you can discuss  data quality issues/concerns , or interesting findings you observed in regards to the data (remember, this is from a data engineer perspective)
+> * Be ready to present your slides. Make sure you write your team names.
+
+
 
 
 
