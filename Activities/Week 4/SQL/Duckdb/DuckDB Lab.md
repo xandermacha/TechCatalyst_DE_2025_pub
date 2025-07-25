@@ -227,7 +227,7 @@ SELECT * FROM taxi_lake.daily_trips FOR VERSION AS OF 1
 EXCEPT
 SELECT * FROM taxi_lake.daily_trips FOR VERSION AS OF 2;
 
-FROM ducklake_table_changes('taxi_lake', 'main', 'main', 1, 2);
+FROM ducklake_table_changes('taxi_lake', 'daily_trips', 'main', 1, 2);
 ```
 
 You have just performed a `DELETE` on a table in your data lake and then used time travel to audit the changes and query the data exactly as it was before the operation.
