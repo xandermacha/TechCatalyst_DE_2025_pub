@@ -186,7 +186,7 @@ Now, instead of creating a regular table, we'll create a managed table within ou
 -- DuckLake will copy the data into its own managed storage format (Parquet).
 -- We will use a smaller CSV file for this example.
 CREATE OR REPLACE TABLE taxi_lake.daily_trips AS
-SELECT * FROM 's3://techcatalyst-raw/stages/yellow_dailytrip.csv';
+SELECT * FROM 's3://techcatalyst-raw/stage/yellow_tripdata.csv';
 
 -- Let's see how many trips were paid for by credit card (payment_type = 1)
 SELECT count(*) FROM taxi_lake.daily_trips WHERE payment_type = 1;
