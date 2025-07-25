@@ -52,13 +52,12 @@ After you visualize, what do you observe? Can you spot overall trend?
 
 What do you observer?
 
-#### Drill 4: Calculate Z-Score of Closing Price (Rolling Standard Score)
+#### (OPTIONAL) Drill 4: Calculate Z-Score of Closing Price (Rolling Standard Score)
 
 **Objective:**
-Standardize the closing price with a rolling Z-score to identify how many standard deviations a closing price is from its rolling mean (e.g., 30-day z-score). This is often used for mean-reversion trading signals or anomalies.
-$$
-\text{Z-Score} = \frac{\text{Close}-\text{Rolling Mean}}{\text{Rolling Std Dev}}
-$$
+Standardize the closing price with a rolling Z-score to identify how many standard deviations a closing price is from its rolling mean (e.g., 30-day z-score). This is often used for mean-reversion trading signals or anomalies.  
+
+$\text{Z-Score} = \frac{\text{Close}-\text{Rolling Mean}}{\text{Rolling Std Dev}}$
 
 > [!TIP]
 >
@@ -90,7 +89,7 @@ What do you observer? An interring data points?
 
 Calculate Z-Score of Closing Price (Rolling Standard Score)
 
-#### Drill 5: Calculate Z-Score of Closing Price (Rolling Standard Score) 
+#### (OPTIONAL) Drill 5: Calculate Z-Score of Closing Price (Rolling Standard Score) 
 
 **Objective**: Expand your SQL code for the **30-day rolling Z-score** to add a new column highlighting potential outliers—those where the z-score is above **+3** or below **-3**.
 
