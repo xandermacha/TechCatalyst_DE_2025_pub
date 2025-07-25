@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2025-07-22T12:55:49.298Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="kCJ0UB_Uf39M1e8zdLue" version="22.1.18" type="device" pages="13">
+<mxfile host="Electron" modified="2025-07-22T20:12:10.939Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="ZZqNJZSdUXDyfCypm1hY" version="22.1.18" type="device" pages="13">
   <diagram name="On-premise vs Hosted" id="SU-b2EqVIJwGN84E-sCT">
     <mxGraphModel dx="1434" dy="854" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1222,6 +1222,9 @@
         <mxCell id="WJBv_LTCG9k7mg9mjetr-4" value="&lt;b&gt;T&lt;/b&gt;RANSFORMATION" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="400" y="270" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="uLsjd1kY3SyuESenlfSt-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WJBv_LTCG9k7mg9mjetr-6" target="uLsjd1kY3SyuESenlfSt-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="WJBv_LTCG9k7mg9mjetr-6" value="&lt;b&gt;L&lt;/b&gt;OAD&lt;br&gt;TO&lt;br&gt;TARGET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="580" y="270" width="120" height="60" as="geometry" />
         </mxCell>
@@ -1237,6 +1240,9 @@
               <mxPoint x="300" y="196" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="uLsjd1kY3SyuESenlfSt-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WJBv_LTCG9k7mg9mjetr-11" target="uLsjd1kY3SyuESenlfSt-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="WJBv_LTCG9k7mg9mjetr-11" value="TRANSFORMATION" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="570" y="160" width="120" height="60" as="geometry" />
@@ -1287,6 +1293,9 @@
         </mxCell>
         <mxCell id="WJBv_LTCG9k7mg9mjetr-35" value="STORE" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="830" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uLsjd1kY3SyuESenlfSt-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="940" y="135" width="30" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
