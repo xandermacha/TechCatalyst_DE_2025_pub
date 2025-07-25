@@ -220,12 +220,7 @@ This is the most powerful feature. The `DELETE` operation was non-destructive. T
 -- The first snapshot (before the delete) should have snapshot_id = 1.
 -- Let's query the table AS OF that version.
 -- The result should be the original, higher count.
-SELECT count(*) FROM taxi_lake.daily_trips FOR VERSION AS OF 1;
-
--- You can even see the data that was deleted.
-SELECT * FROM taxi_lake.daily_trips FOR VERSION AS OF 1
-EXCEPT
-SELECT * FROM taxi_lake.daily_trips FOR VERSION AS OF 2;
+SELECT count(*) FROM taxi_lake.daily_trips AT (VERSION => 1);
 
 FROM ducklake_table_changes('taxi_lake', 'daily_trips', 'main', 1, 2);
 ```
