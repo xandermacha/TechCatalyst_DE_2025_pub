@@ -186,7 +186,7 @@ Now, instead of creating a regular table, we'll create a managed table within ou
 -- DuckLake will copy the data into its own managed storage format (Parquet).
 -- We will use a smaller CSV file for this example.
 CREATE OR REPLACE TABLE taxi_lake.daily_trips AS
-SELECT * FROM 's3://techcatalyst-raw/stages/yellow_dailytrip.csv';
+SELECT * FROM 's3://techcatalyst-raw/stage/yellow_tripdata.csv';
 
 -- Let's see how many trips were paid for by credit card (payment_type = 1)
 SELECT count(*) FROM taxi_lake.daily_trips WHERE payment_type = 1;
@@ -220,12 +220,7 @@ This is the most powerful feature. The `DELETE` operation was non-destructive. T
 -- The first snapshot (before the delete) should have snapshot_id = 1.
 -- Let's query the table AS OF that version.
 -- The result should be the original, higher count.
-SELECT count(*) FROM taxi_lake.daily_trips FOR VERSION AS OF 1;
-
--- You can even see the data that was deleted.
-SELECT * FROM taxi_lake.daily_trips FOR VERSION AS OF 1
-EXCEPT
-SELECT * FROM taxi_lake.daily_trips FOR VERSION AS OF 2;
+SELECT count(*) FROM taxi_lake.daily_trips AT (VERSION => 1);
 
 FROM ducklake_table_changes('taxi_lake', 'daily_trips', 'main', 1, 2);
 ```
