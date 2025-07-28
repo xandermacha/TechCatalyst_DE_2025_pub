@@ -4,3 +4,19 @@
 **/.ipynb_checkpoints/
 /.vscode
 /.venv
+**/.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+.gitignore
+
+# VSCode settings
+.vscode/
+
+# Ignore all .env files anywhere in the repo
+**/.env
+
+# Ignore all .cfg files anywhere in the repo
+**/*.cfg
+
+**/*.bkp
