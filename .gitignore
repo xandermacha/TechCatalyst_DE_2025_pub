@@ -3,3 +3,4 @@
 **/*.cfg
 **/.ipynb_checkpoints/
 /.vscode
+/.venv
