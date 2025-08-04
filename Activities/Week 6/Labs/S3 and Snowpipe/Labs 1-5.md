@@ -431,7 +431,7 @@ The above line confirmst that the parquet file was written in the specified S3 b
 We can also do this via awswrangler
 
 ```python
-wr.catalog.tables #YOUR CODE
+wr.catalog.tables(database=database_name)
 ```
 
 You can also do a search for tables by name
