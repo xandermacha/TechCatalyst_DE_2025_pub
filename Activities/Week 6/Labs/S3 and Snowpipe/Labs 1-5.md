@@ -32,6 +32,7 @@
 | `download_fileobj` |             |                    |          |          |
 | `get_object`       |             |                    |          |          |
 
+
 #### Reflection Questions:
 
 1. **Upload Methods**:
