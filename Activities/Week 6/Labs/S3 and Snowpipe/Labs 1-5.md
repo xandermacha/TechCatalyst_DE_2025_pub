@@ -32,6 +32,18 @@
 | `download_fileobj` |             |                    |          |          |
 | `get_object`       |             |                    |          |          |
 
+
+
+
+| **Method**         | **Purpose**                                                                 | **Best Use Cases**                                                                 | **Pros**                                                                 | **Cons**                                                                 |
+|--------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| `upload_file`      | Upload a file from local storage to an S3 bucket.                           | Large file uploads, simple file transfers.                                         | Handles multipart uploads automatically; easy to use.                   | Requires file path; not suitable for in-memory data.                    |
+| `upload_fileobj`   | Upload a file-like object to an S3 bucket.                                  | Uploading in-memory files (e.g., BytesIO), streaming data.                         | Flexible with file-like objects; supports streaming.                    | Requires manual multipart handling for large files.                    |
+| `put_object`       | Upload raw bytes or string data to an S3 bucket.                            | Small files, metadata updates, quick object creation.                              | Direct control over object content and metadata.                        | No automatic multipart support; less suitable for large files.         |
+| `download_file`    | Download a file from an S3 bucket to local storage.                         | Large file downloads, simple file retrieval.                                       | Handles multipart downloads; easy to use.                               | Requires file path; not suitable for in-memory processing.             |
+| `download_fileobj` | Download an S3 object to a file-like object.                                | In-memory processing, streaming downloads.                                         | Flexible with file-like objects; supports streaming.                    | Requires manual handling for large files.                              |
+| `get_object`       | Retrieve an object from S3, including its metadata and content.             | Reading object content directly, accessing metadata, partial downloads.            | Full access to object metadata and content; supports range requests.    | Requires manual handling for large files; response needs parsing.      |
+
 #### Reflection Questions:
 
 1. **Upload Methods**:
