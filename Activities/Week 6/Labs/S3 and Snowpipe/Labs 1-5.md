@@ -12,6 +12,7 @@
 
 1. **Read the Provided Information**:
    - Carefully read the descriptions and purposes of each method (`upload_file`, `upload_fileobj`, `put_object`, `download_file`, `download_fileobj`, `get_object`).
+     	-
    - Understand the parameters, features, and return values of each method.
 2. **Research and Analysis**:
    - Research more about these methods from the Boto3 documentation and other reliable sources.
