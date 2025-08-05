@@ -22,6 +22,22 @@
 
 
 
+## Student Showcase 
+
+* [Blake](https://github.com/Havenfire/techcatalyst-2025/blob/master/S3_Snowflake_Pipeline/Lab_Written_solutions.md)
+
+  <img src="images/image-20250805183155475.png" alt="image-20250805183155475" style="zoom:50%;" />
+
+* [Jaden](https://github.com/JadenAstle/techcatalyst-2025/blob/main/aws_snowpipe_labs/submission.md)
+
+  <img src="images/image-20250805183243322.png" alt="image-20250805183243322" style="zoom:50%;" />
+
+* [Ben](https://github.com/BenA669/BAtechca/blob/main/lab1-5/etl_solution.md)
+
+  <img src="images/image-20250805183314615.png" alt="image-20250805183314615" style="zoom:50%;" />
+
+
+
 # Key Data Engineering Skills
 
 [Source](https://www.tealhq.com/skills/data-engineer)
