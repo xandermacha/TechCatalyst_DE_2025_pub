@@ -5,6 +5,7 @@
 ![image-20240612110851319](images/image-20240612110851319.png)
 
 * [Learning Plan](#learning-journey)
+* [Student Showcase](#Student-Showcase)
 * [Key Data Engineering Skills](#key-data-engineering-skills)
 * [Most Underrated Skills for Data Engineers](#Most-Underrated-Skills-for-Data-Engineers)
 * [AWS](#aws-console)
