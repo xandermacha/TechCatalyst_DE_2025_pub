@@ -637,7 +637,9 @@ Our final task is to configure the Lambda function so that whenever a CSV file i
 >
 > Expect to spend a lot of time troubleshooting here. This is common and it is expected. Even though my instructions below have been tested and validated, you will make mistakes, and you will need to troubleshoot using lambdas’ **Monitor** section. You will spend a lot of time trying to read the logs to understand what worked.
 
-![image-20240722200238873](Lab 2/images/image-20240722200238873.png)
+![image-20240722200107156](images/image-20240722200107156.png)
+
+![image-20240722200238873](images/image-20240722200238873.png)
 
 # Lab 5: Automating Snowpipe for Amazon S3
 

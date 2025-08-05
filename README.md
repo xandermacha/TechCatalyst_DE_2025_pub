@@ -5,6 +5,7 @@
 ![image-20240612110851319](images/image-20240612110851319.png)
 
 * [Learning Plan](#learning-journey)
+* [Student Showcase](#Student-Showcase)
 * [Key Data Engineering Skills](#key-data-engineering-skills)
 * [Most Underrated Skills for Data Engineers](#Most-Underrated-Skills-for-Data-Engineers)
 * [AWS](#aws-console)
@@ -21,6 +22,24 @@
 ![Data-Engineering-Plan](images/Data-Engineering-Plan.png)
 
 
+
+## Student Showcase 
+
+* [Blake](https://github.com/Havenfire/techcatalyst-2025/blob/master/S3_Snowflake_Pipeline/Lab_Written_solutions.md)
+
+  <img src="images/image-20250805183155475.png" alt="image-20250805183155475" style="zoom:50%;" />
+
+* [Jaden](https://github.com/JadenAstle/techcatalyst-2025/blob/main/aws_snowpipe_labs/submission.md)
+
+  <img src="images/image-20250805183243322.png" alt="image-20250805183243322" style="zoom:50%;" />
+
+* [Ben](https://github.com/BenA669/BAtechca/blob/main/lab1-5/etl_solution.md)
+
+  <img src="images/image-20250805183314615.png" alt="image-20250805183314615" style="zoom:50%;" />
+
+* [Fabiola](https://github.com/fabiola-rojas/techcat2025-fabiola/tree/baeb1ed41030e6a973ed5af3e50b9682840e5087/w6-work/S3%20and%20Snowflake%20(w6d1))
+
+  <img src="images/image-20250805184131630.png" alt="image-20250805184131630" style="zoom:50%;" />
 
 # Key Data Engineering Skills
 
