@@ -41,6 +41,38 @@
 
   <img src="images/image-20250805184131630.png" alt="image-20250805184131630" style="zoom:50%;" />
 
+* [Emma](https://github.com/emmaparadis/techcatalyst2025/blob/main/AWS_Snowpipe_Project/lab.md)
+
+  <img src="images/image-20250805190521132.png" alt="image-20250805190521132" style="zoom:50%;" />
+
+* Suchita
+
+  <img src="images/image-20250805190603560.png" alt="image-20250805190603560" style="zoom:50%;" />
+
+* [Shaswat](https://github.com/Shaswat975/techcatalyst-2025/tree/main/Week%206%20Labs%201-5)
+
+  <img src="images/image-20250805215732152.png" alt="image-20250805215732152" style="zoom:50%;" />
+
+  
+
+* [Melissa](https://github.com/melissarfranco25/techCat25/tree/main/Training/Week_6)
+
+  <img src="images/image-20250805215840949.png" alt="image-20250805215840949" style="zoom:50%;" />
+
+* [Camrenn](https://github.com/CamrennWallace-Rivera/techcatalyst-2025/blob/main/Camrenn_SnowPipe_Lab/Cam_Pipe.md)
+
+  <img src="images/image-20250805215922771.png" alt="image-20250805215922771" style="zoom:50%;" />
+
+* [XanderMacha](https://github.com/xandermacha/techcat-de-2025/blob/master/s3%20and%20snowpipe/s3%20and%20snowpipe.md)
+
+  <img src="images/image-20250805220045734.png" alt="image-20250805220045734" style="zoom:50%;" />
+
+* 
+
+  
+
+  
+
 # Key Data Engineering Skills
 
 [Source](https://www.tealhq.com/skills/data-engineer)
