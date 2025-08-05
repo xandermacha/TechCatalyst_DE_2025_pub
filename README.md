@@ -37,7 +37,9 @@
 
   <img src="images/image-20250805183314615.png" alt="image-20250805183314615" style="zoom:50%;" />
 
+* [Fabiola](https://github.com/fabiola-rojas/techcat2025-fabiola/tree/baeb1ed41030e6a973ed5af3e50b9682840e5087/w6-work/S3%20and%20Snowflake%20(w6d1))
 
+  <img src="images/image-20250805184131630.png" alt="image-20250805184131630" style="zoom:50%;" />
 
 # Key Data Engineering Skills
 
