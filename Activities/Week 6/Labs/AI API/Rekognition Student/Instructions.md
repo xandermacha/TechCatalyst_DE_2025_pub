@@ -55,11 +55,11 @@ with open('Images/b7e7072fc29fd465.jpg', 'rb') as image_file:
 ## Part 3: Store results in S3 as a Parquet File
 Raw text files (like CSVs) are good, but columnar formats like Parquet are much more efficient for analytics. They are faster to query and take up less space. We will save our DataFrame as a Parquet file and upload it to a "processed" folder in S3 `TECHCATALYST-RAW/YOURNAME/AI/IMAGES_PROCESSED/`.
 
-* Figure out how you can save the plots (The Bar charts and Pie charts) and have them uploaded as `.jpg` images to the `/IMAGES_PROCESSED/` folder along with the parquer file.
+* Figure out how you can save the plots (The Bar charts and Pie charts) and have them uploaded as `.jpg` images to the `/IMAGES_PROCESSED/` folder along with the `parquet` file. (YOU CAN SAVE AS CSV OR PARQUET. )
 
 __Instructions__
 
-* Save the output DataFrame as a Parquet file to the new S3 location.
+* Save the output DataFrame as a Parquet file to the new S3 location. DataFrame will contain S3 File path for each image (that’s the image Key), State, and Car Make.
 * Create plots (Pie charts and bar charts as shown below) using `DataFrame.plot()` 
   * **Hint**: `DataFrame.value_counts()`
   * Figure out how you can save the plot as a `.jpg`
