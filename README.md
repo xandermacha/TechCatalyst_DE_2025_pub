@@ -23,7 +23,7 @@
 
 
 
-## Student Showcase 
+## Student Showcase (11 Students)
 
 * [Blake](https://github.com/Havenfire/techcatalyst-2025/blob/master/S3_Snowflake_Pipeline/Lab_Written_solutions.md)
 
@@ -67,10 +67,12 @@
 
   <img src="images/image-20250805220045734.png" alt="image-20250805220045734" style="zoom:50%;" />
 
-* 
+* [Alexia](https://github.com/AlexiaAdams/techcat-2025/tree/main/Snowpipe)
+
+  <img src="images/image-20250805221353886.png" alt="image-20250805221353886" style="zoom:50%;" />
 
   
-
+  
   
 
 # Key Data Engineering Skills
