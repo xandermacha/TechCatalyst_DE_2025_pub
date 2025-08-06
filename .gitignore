@@ -1,3 +1,4 @@
 *.env
 *.cfg
 *config*.py
+__pycache__
