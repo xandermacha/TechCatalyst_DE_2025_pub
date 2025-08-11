@@ -16,6 +16,7 @@
 **/*.cfg
 
 # Ignore backup files any where 
-**/*.bkp*config*.py
+**/*.bkp
+*config*.py
 __pycache__
 pycaret_env
