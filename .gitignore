@@ -20,3 +20,5 @@
 *config*.py
 __pycache__
 pycaret_env
+
+viz/
