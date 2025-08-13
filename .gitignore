@@ -17,3 +17,7 @@
 
 # Ignore backup files any where 
 **/*.bkp
+
+**/*.venv
+
+**/*viz
