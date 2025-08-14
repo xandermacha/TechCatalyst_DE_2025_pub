@@ -18,9 +18,7 @@
 
 **Create the following LOB Report**
 
-Make sure the view is full screen
-
-![image-20240730171215196](images/image-20240730171215196.png)
+![image-20250814160046655](images/image-20250814160046655.png)
 
 **Create a Products Hierarchy and a Geography Hierarchy**
 
